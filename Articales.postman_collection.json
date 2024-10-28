@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "38685e86-9533-4d74-9f40-ef08bf61a410",
+		"name": "Articales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13991279",
+		"_collection_link": "https://universal-star-162988.postman.co/workspace/Team-Workspace~680fda49-5285-4978-8495-bbf113f643fe/collection/13991279-38685e86-9533-4d74-9f40-ef08bf61a410?action=share&source=collection_link&creator=13991279"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en",
+								"type": "default"
+							},
+							{
+								"key": "clientID",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Geetanjali Viahwakarma",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "geetuvish1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "9889634731",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "geetanjali",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/user/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Sign-in",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "geetuvish@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "geetanjali",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Sign-out",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"locale\":\"en\",\n    \"deviceId\": \"1222131\"\n}"
+						},
+						"url": "http://localhost:8000/api/user/sign-out"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Artical",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9zaWduLWluIiwiaWF0IjoxNzMwMTMxNDQ1LCJleHAiOjE3MzAxMzUwNDUsIm5iZiI6MTczMDEzMTQ0NSwianRpIjoibExKWmgzNkF4SjV2UmdvZyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Niq8QryNpyeRgXdukD2-bioZs8uQVVrOYAbKr_8m6iI"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Title",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "dfghj fghjkl",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/user/artical/create"
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9zaWduLWluIiwiaWF0IjoxNzMwMTMxNDQ1LCJleHAiOjE3MzAxMzUwNDUsIm5iZiI6MTczMDEzMTQ0NSwianRpIjoibExKWmgzNkF4SjV2UmdvZyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Niq8QryNpyeRgXdukD2-bioZs8uQVVrOYAbKr_8m6iI"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"locale\": \"en\",\n    \"filter\": {\n    \t\"uuid\": \"LCWJM616JRKS3YWF\",\n    \t\"createdAt\": \"2022-04-05\"\n    },\n    \"sort\": { \"email\": \"desc\" },\n    \"page\": 1,\n    \"pageSize\": 20\n}"
+						},
+						"url": "http://localhost:8000/api/user/artical/list"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Artical By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9zaWduLWluIiwiaWF0IjoxNzMwMTMxNDQ1LCJleHAiOjE3MzAxMzUwNDUsIm5iZiI6MTczMDEzMTQ0NSwianRpIjoibExKWmgzNkF4SjV2UmdvZyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Niq8QryNpyeRgXdukD2-bioZs8uQVVrOYAbKr_8m6iI"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJyb2xlSWQiOjQsImZpcnN0TmFtZSI6InRlc3QzIiwibGFzdE5hbWUiOiJ0ZXN0IiwidXNlclVVSUQiOiJJUFpPN0ZLMzVZTktMUThLIiwic2V0dGluZ3MiOlt7ImVuYWJsZSI6dHJ1ZX1dLCJpYXQiOjE2NDgyMDU0MDcsImV4cCI6MTY0ODIwNTQ2N30.poFiCZslLWGEgW3M4UGDrBzXTXz_JXb1zKwcQFFihfk"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en"
+							}
+						],
+						"url": "http://localhost:8000/api/user/artical/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Articalby ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9zaWduLWluIiwiaWF0IjoxNzMwMTMxNDQ1LCJleHAiOjE3MzAxMzUwNDUsIm5iZiI6MTczMDEzMTQ0NSwianRpIjoibExKWmgzNkF4SjV2UmdvZyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Niq8QryNpyeRgXdukD2-bioZs8uQVVrOYAbKr_8m6iI"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Title34567",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/user/artical/update/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Artical by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9zaWduLWluIiwiaWF0IjoxNzMwMTMxNDQ1LCJleHAiOjE3MzAxMzUwNDUsIm5iZiI6MTczMDEzMTQ0NSwianRpIjoibExKWmgzNkF4SjV2UmdvZyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Niq8QryNpyeRgXdukD2-bioZs8uQVVrOYAbKr_8m6iI"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en"
+							}
+						],
+						"url": "http://localhost:8000/api/user/artical/delete/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Encrypt-Decrypt",
+			"item": [
+				{
+					"name": "Encrypt",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTczMDEzNjc3MSwiZXhwIjoxNzMwMTQwMzcxLCJuYmYiOjE3MzAxMzY3NzEsImp0aSI6IjhWbDMyeWVyWXlpN1Y3QmoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sF0SMOfUJY_w2wi2NC-sP5WkpXVjTMDAPNiLirFaEDA"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "Hello, secure world!",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/user/encrypt"
+					},
+					"response": []
+				},
+				{
+					"name": "Encrypt Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTczMDEzNjc3MSwiZXhwIjoxNzMwMTQwMzcxLCJuYmYiOjE3MzAxMzY3NzEsImp0aSI6IjhWbDMyeWVyWXlpN1Y3QmoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sF0SMOfUJY_w2wi2NC-sP5WkpXVjTMDAPNiLirFaEDA"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "locale",
+								"value": "en"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "encrypted_data",
+									"value": "encrypted-string-from-server",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/user/decrypt"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
