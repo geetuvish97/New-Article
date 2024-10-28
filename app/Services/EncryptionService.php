@@ -28,7 +28,6 @@ class EncryptionService
      */
     private function deriveKey($apiKey)
     {
-        // You can use any derivation logic. For simplicity, using hash here.
         return hash('sha256', $apiKey, true);
     }
 }
