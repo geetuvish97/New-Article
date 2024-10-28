@@ -31,7 +31,7 @@ Route::group(['prefix' => '/', 'middleware' => ['user.auth']], function () {
 
 });
 
-Route::middleware('auth:api')->group(function () {
+Route::middleware('user.auth')->group(function () {
     Route::post('/encrypt', [EncryptionController::class, 'encrypt']);
     Route::post('/decrypt', [EncryptionController::class, 'decrypt']);
 });
