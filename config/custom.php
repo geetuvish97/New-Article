@@ -1,0 +1,25 @@
+<?php
+return [
+    'app_url' => env('APP_URL', 'http://localhost'),
+    'logo' => 'https://hamptons.teamlaravel.com/wp-content/uploads/2023/04/Hamptons_Lockup_Dark-Blue-4.png',
+    'smsjust_username' =>  env('SMSJUST_USERNAME'),
+    'smsjust_password' =>  env('SMSJUST_PASSWORD'),
+    'smsjust_senderid' =>  env('SMSJUST_SENDERID'),
+    'otp_expire_time' => '10', /**In minute */
+    'hubspot_client_id' =>  env('HUBSPOT_CLIENT_ID'),
+    'hubspot_secret' =>  env('HUBSPOT_SECRET'),
+    'hubspot_api_key' =>  env('HUBSPOT_API_KEY'),
+    'hubspot_api_test_token' =>  env('HUBSPOT_API_TEST_TOKEN'),
+    'master_otp' => 1111,
+    'wp_base_url' => env('WP_BASE_URL', 'http://localhost'),
+    'wp_data_api_base_url' => env('WP_DATA_API_BASE_URL', 'https://api-gw.propdata.net'),
+    'wp_data_login_api' => env('WP_DATA_LOGIN_API', '/users/public-api/login/'),
+    'wp_data_mashup_api_username' => env('WP_DATA_MASHUP_API_USERNAME', 'pdapi@hamptonsuae.com'),
+    'wp_data_mashup_api_password' => env('WP_DATA_MASHUP_API_PASSWORD', '02c0f44f-3788-4b9d-b998'),
+    'wp_data_mashup_commercial_api' => env('WP_DATA_MASHUP_COMMERCIAL_API', '/mashup/api/v1/commercial/?limit=1000&offset=100&meta_fields=agent,location,branch,listing_images'),
+    'wp_data_mashup_residential_api' => env('WP_DATA_MASHUP_RESIDENTIAL_API', '/mashup/api/v1/residential/?limit=1000&offset=100&meta_fields=agent,location,branch,listing_images'),
+    'wp_data_api_access_token' => env('WP_DATA_API_ACCESS_TOKEN', 'YXBpLXZlbmRvckBoYW1wdG9ucy5hZTpaSk1ITVp0S0tKNUd3TmI'),
+    'wp_data_cron_rule' => env('WP_DATA_CRON_RULE', '0 22 * * *'),
+    'per_page' => 6,
+    'notification_cron_rule' => env('NOTIFICATION_CRON_RULE', '0 23 * * *'),
+];
