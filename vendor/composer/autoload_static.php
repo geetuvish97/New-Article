@@ -519,6 +519,7 @@ class ComposerStaticInit4da68e9fd333cb1ac3ca46bcd53b9a35
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\ArticalController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticalController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\EncryptionController' => __DIR__ . '/../..' . '/app/Http/Controllers/EncryptionController.php',
         'App\\Http\\Controllers\\UserAuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserAuthController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

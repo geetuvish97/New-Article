@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\ArticalController;
+use App\Http\Controllers\EncryptionController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,7 +20,6 @@ Route::post('/login', [UserAuthController::class, 'login']);
 
 Route::group(['prefix' => '/', 'middleware' => ['user.auth']], function () {
     Route::get('/logout', [UserAuthController::class, 'logout']);
-
     /** User artical routes*/
     Route::group(['prefix' => '/artical'], function () {
         Route::post('/create', [ArticalController::class, 'create']);
@@ -29,4 +29,9 @@ Route::group(['prefix' => '/', 'middleware' => ['user.auth']], function () {
         Route::post('/list', [ArticalController::class, 'list']);
     });
 
+});
+
+Route::middleware('auth:api')->group(function () {
+    Route::post('/encrypt', [EncryptionController::class, 'encrypt']);
+    Route::post('/decrypt', [EncryptionController::class, 'decrypt']);
 });

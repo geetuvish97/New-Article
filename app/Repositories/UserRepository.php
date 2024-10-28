@@ -41,6 +41,7 @@ class UserRepository extends BaseRepository
         $fieldDataArray['email'] = $request->email;
         $fieldDataArray['mobile'] = $request->mobile;
         $fieldDataArray['password'] = bcrypt($request->password);
+        $fieldDataArray['api_key'] = Str::random(32);
         return $this->user()->create($fieldDataArray);
     }
 
